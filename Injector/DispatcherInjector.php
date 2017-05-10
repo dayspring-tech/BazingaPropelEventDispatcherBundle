@@ -4,7 +4,7 @@ namespace Bazinga\Bundle\PropelEventDispatcherBundle\Injector;
 
 use Bazinga\Bundle\PropelEventDispatcherBundle\EventDispatcher\LazyEventDispatcher;
 use Symfony\Component\DependencyInjection\ContainerInterface;
-use Symfony\Component\HttpKernel\Log\LoggerInterface;
+use Psr\Log\LoggerInterface;
 
 class DispatcherInjector
 {
@@ -73,7 +73,7 @@ class DispatcherInjector
     private function log($message)
     {
         if (null !== $this->logger) {
-            $this->logger->warn($message);
+            $this->logger->warning($message);
         }
     }
 }
