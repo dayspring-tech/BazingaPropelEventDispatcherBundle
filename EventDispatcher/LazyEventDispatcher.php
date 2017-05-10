@@ -94,6 +94,18 @@ class LazyEventDispatcher implements EventDispatcherInterface
     }
 
     /**
+     * {@inheritdoc}
+     */
+    public function getListenerPriority($eventName, $listener) 
+    {
+        if (!method_exists($this->getEventDispatcher(), 'getListenerPriority')) {
+            throw new \BadMethodCallException('getListenerPriority() is not implemented');
+        }
+        
+        return $this->getEventDispatcher()->getListenerPriority($eventName, $listener);
+    }
+    
+    /**
      * @return EventDispatcherInterface
      */
     protected function getEventDispatcher()
