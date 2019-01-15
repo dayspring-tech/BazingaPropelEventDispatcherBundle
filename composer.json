@@ -3,7 +3,7 @@
     "description": "Integrates the Propel EventDispatcherBehavior into Symfony2.",
     "license": "MIT",
     "require": {
-        "willdurand/propel-eventdispatcher-behavior": "1.3.1.x-dev"
+        "willdurand/propel-eventdispatcher-behavior": "1.3.x-dev"
     },
     "require-dev": {
         "symfony/framework-bundle": "^3.3",
