@@ -40,9 +40,9 @@ class LazyEventDispatcher implements EventDispatcherInterface
     /**
      * {@inheritdoc}
      */
-    public function dispatch($eventName, Event $event = null)
+    public function dispatch($event, string $eventName = null): object
     {
-        return $this->getEventDispatcher()->dispatch($eventName, $event);
+        return $this->getEventDispatcher()->dispatch($event, $eventName);
     }
 
     /**

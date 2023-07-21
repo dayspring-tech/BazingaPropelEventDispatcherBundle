@@ -3,6 +3,7 @@
 namespace Bazinga\Bundle\PropelEventDispatcherBundle\Tests;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase as BaseWebTestCase;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\HttpKernel\Kernel;
 
@@ -18,7 +19,7 @@ abstract class WebTestCase extends BaseWebTestCase
         $fs->remove($dir);
     }
 
-    protected function getContainer(array $options = array())
+    protected static function getContainer(array $options = array()): ContainerInterface
     {
         if (!static::$kernel) {
             static::$kernel = static::createKernel($options);
@@ -45,7 +46,7 @@ abstract class WebTestCase extends BaseWebTestCase
         );
     }
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
         $this->deleteTmpDir();
