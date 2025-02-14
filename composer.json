@@ -1,28 +1,37 @@
 {
-    "name": "willdurand/propel-eventdispatcher-bundle",
+    "name": "dayspring-tech/propel-eventdispatcher-bundle",
     "description": "Integrates the Propel EventDispatcherBehavior into Symfony2.",
     "license": "MIT",
     "require": {
-        "willdurand/propel-eventdispatcher-behavior": "1.3.1.x-dev"
+        "dayspring-tech/propel-eventdispatcher-behavior": "4.x-dev"
     },
     "require-dev": {
         "symfony/framework-bundle": "^3.3|^4.0",
         "symfony/yaml": "^3.3|^4.0"
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url":  "git@github.com:dayspring-tech/EventDispatcherBehavior.git"
-        }
-    ],
     "authors": [
         {
             "name": "William DURAND",
             "email": "william.durand1@gmail.com"
+        },
+        {
+            "name": "Jeffrey Wong",
+            "email": "jwong@dayspringpartners.com"
+        },
+        {
+            "name": "Stan Situ",
+            "email": "ssitu@dayspringpartners.com"
+        },
+        {
+            "name": "Bruce Yu",
+            "email": "bwyu@dayspringpartners.com"
         }
     ],
     "autoload": {
         "psr-0": { "Bazinga\\Bundle\\PropelEventDispatcherBundle": "" }
     },
-    "target-dir": "Bazinga/Bundle/PropelEventDispatcherBundle"
+    "target-dir": "Bazinga/Bundle/PropelEventDispatcherBundle",
+    "replace": {
+        "willdurand/propel-eventdispatcher-bundle": "<=1.0.1"
+    }
 }
