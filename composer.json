@@ -1,25 +1,31 @@
 {
-    "name": "willdurand/propel-eventdispatcher-bundle",
+    "name": "dayspring-tech/propel-eventdispatcher-bundle",
     "description": "Integrates the Propel EventDispatcherBehavior into Symfony2.",
     "license": "MIT",
     "require": {
-        "willdurand/propel-eventdispatcher-behavior": "dev-fix/event-dispatcher"
+        "dayspring-tech/propel-eventdispatcher-behavior": "5.x-dev"
     },
     "require-dev": {
         "symfony/framework-bundle": "^4.3|^5.0",
         "symfony/yaml": "^4.0|^5.0",
         "phpunit/phpunit": "~8.5.33|^9.0"
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url":  "git@github.com:dayspring-tech/EventDispatcherBehavior.git"
-        }
-    ],
     "authors": [
         {
             "name": "William DURAND",
             "email": "william.durand1@gmail.com"
+        },
+        {
+            "name": "Jeffrey Wong",
+            "email": "jwong@dayspringpartners.com"
+        },
+        {
+            "name": "Stan Situ",
+            "email": "ssitu@dayspringpartners.com"
+        },
+        {
+            "name": "Bruce Yu",
+            "email": "bwyu@dayspringpartners.com"
         }
     ],
     "autoload": {
@@ -31,5 +37,8 @@
             "Composer\\Config::disableProcessTimeout",
             "vendor/bin/phpunit -c ./phpunit.xml.dist"
         ]
+    },
+    "replace": {
+        "willdurand/propel-eventdispatcher-bundle": "<=1.0.1"
     }
 }
