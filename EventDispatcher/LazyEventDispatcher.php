@@ -80,7 +80,7 @@ class LazyEventDispatcher implements EventDispatcherInterface
     /**
      * {@inheritdoc}
      */
-    public function getListeners($eventName = null)
+    public function getListeners($eventName = null): array
     {
         return $this->getEventDispatcher()->getListeners($eventName);
     }
@@ -88,7 +88,7 @@ class LazyEventDispatcher implements EventDispatcherInterface
     /**
      * {@inheritdoc}
      */
-    public function hasListeners($eventName = null)
+    public function hasListeners($eventName = null): bool
     {
         return $this->getEventDispatcher()->hasListeners($eventName);
     }
@@ -96,7 +96,7 @@ class LazyEventDispatcher implements EventDispatcherInterface
     /**
      * {@inheritdoc}
      */
-    public function getListenerPriority($eventName, $listener) 
+    public function getListenerPriority($eventName, $listener): ?int
     {
         if (!method_exists($this->getEventDispatcher(), 'getListenerPriority')) {
             throw new \BadMethodCallException('getListenerPriority() is not implemented');

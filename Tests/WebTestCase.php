@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Test\WebTestCase as BaseWebTestCase;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\HttpKernel\Kernel;
+use Symfony\Component\HttpKernel\KernelInterface;
 
 abstract class WebTestCase extends BaseWebTestCase
 {
@@ -29,14 +30,14 @@ abstract class WebTestCase extends BaseWebTestCase
         return static::$kernel->getContainer();
     }
 
-    protected static function getKernelClass()
+    protected static function getKernelClass(): string
     {
         require_once __DIR__.'/Fixtures/app/AppKernel.php';
 
         return 'Bazinga\Bundle\PropelEventDispatcherBundle\Tests\Functional\AppKernel';
     }
 
-    protected static function createKernel(array $options = array())
+    protected static function createKernel(array $options = array()): KernelInterface
     {
         $class = self::getKernelClass();
 
