@@ -3,7 +3,7 @@
     "description": "Integrates the Propel EventDispatcherBehavior into Symfony2.",
     "license": "MIT",
     "require": {
-        "dayspring-tech/propel-eventdispatcher-behavior": "6.x-dev"
+        "dayspring-tech/propel-eventdispatcher-behavior": "^6.0"
     },
     "require-dev": {
         "php": ">=8.2",
